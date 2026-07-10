@@ -1,0 +1,10 @@
+---
+interface Props {
+    class: string;
+}
+const className = Astro.props.class;
+---
+
+<div data-pagefind-body class={`max-w-none! custom-md ${className}`}>
+    <slot />
+</div>

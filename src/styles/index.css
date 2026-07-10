@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+    /* colors */
+    --background: #f4f6fb;
+    --blue: #2447f9;
+    --orange: #fc7a46;
+    --text: #34364a;
+    --gradient1: linear-gradient(to right, #2447f9, #fc7a46);
+    --header-gradient: linear-gradient(
+        90deg,
+        #460239 0%,
+        #533b79 30%,
+        #3342a5 65%,
+        #2447f9 100%
+    );
+}
+
+html {
+    background-color: var(--background);
+    color: var(--blue);
+    color: var(--orange);
+    color: var(--text);
+    background: var(--gradient1);
+}
+
+body {
+    background: var(--background);
+}
+
+.header-gradient {
+    background: var(--header-gradient);
+}
+
+.border {
+    border: 1px solid #2447f9;
+}
+
+.border-bottom {
+    border-bottom: 2px solid;
+    border-image: var(--header-gradient) 1;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #1f2937;
+    line-height: 1.8;
+    font-size: 1.125rem; /* 18px */
+}
+
+.about-content h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: #111827;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #111827;
+}
+
+.about-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.about-content p {
+    margin-bottom: 1.25rem;
+    text-align: justify;
+}
+
+.about-content ul {
+    margin: 1.5rem 0;
+    padding-left: 1.75rem;
+}
+
+.about-content li {
+    margin-bottom: 0.75rem;
+}
+
+.about-content strong {
+    font-weight: 700;
+}
+
+.about-content a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
+
+.about-content blockquote {
+    border-left: 4px solid #2563eb;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #4b5563;
+    font-style: italic;
+}
+
+.about-content hr {
+    margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+}
+
+.about-content img {
+    border-radius: 12px;
+    margin: 2rem auto;
+    display: block;
+    max-width: 100%;
+}

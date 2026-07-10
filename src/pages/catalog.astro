@@ -1,0 +1,21 @@
+---
+import AboutHeroImage from "../assets/blog-placeholder-about.jpg";
+import Layout from "../layouts/BlogPost.astro";
+import { getEntry, render } from "astro:content";
+import Markdown from "../components/common/Markdown.astro";
+
+const catalogPost = await getEntry("spec", "catalog");
+if (!catalogPost) {
+    throw new Error("Страница каталог не доступна");
+}
+
+const { Content } = await render(catalogPost);
+---
+
+<Layout
+    title="Каталог"
+    description="Lorem ipsum dolor sit amet"
+    pubDate={new Date("August 08 2021")}
+    heroImage={AboutHeroImage}
+    ><Markdown class="md-2"><Content /></Markdown></Layout
+>
