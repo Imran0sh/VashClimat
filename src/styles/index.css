@@ -39,7 +39,7 @@ html, body{
     border-image: var(--gradient2) 1;
 }
 
-
+/*about-content*/
 .about-content {
     max-width: 900px;
     margin: 0 auto;
