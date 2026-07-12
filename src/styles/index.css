@@ -8,7 +8,8 @@
     --orange: #fc7a46;
     --text: #34364a;
     --gradient1: linear-gradient(to right, #2447f9, #fc7a46);
-    --header-gradient: linear-gradient(
+    --gradient2: linear-gradient( #2447f9, #fc7a46);
+    --headerGradient: linear-gradient(
         90deg,
         #460239 0%,
         #533b79 30%,
@@ -17,30 +18,27 @@
     );
 }
 
-html {
-    background-color: var(--background);
-    color: var(--blue);
-    color: var(--orange);
-    color: var(--text);
-    background: var(--gradient1);
-}
-
-body {
+html, body{
     background: var(--background);
-}
-
-.header-gradient {
-    background: var(--header-gradient);
-}
+    color: var(--blue);
+    color: var(--text);
+    height: 100%;
+    }
 
 .border {
     border: 1px solid #2447f9;
 }
 
-.border-bottom {
+.border-b {
     border-bottom: 2px solid;
-    border-image: var(--header-gradient) 1;
+    border-image: var(--gradient1) 1;
 }
+
+.border-r {
+    border-right: 1px solid;
+    border-image: var(--gradient2) 1;
+}
+
 
 .about-content {
     max-width: 900px;
@@ -52,15 +50,15 @@ body {
 
 .about-content h1 {
     font-size: 3rem;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 1.5rem;
     line-height: 1.2;
     color: #111827;
 }
 
 .about-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 100;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     color: #111827;

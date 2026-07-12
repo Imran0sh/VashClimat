@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from "../consts";
 import HeaderLink from "./HeaderLink.astro";
+import BaseHead from "./BaseHead.astro";
 
 import mainAva from "../assets/img/mainAva.svg";
 import search from "../assets/img/fi_search.svg";
@@ -11,9 +12,10 @@ interface HeaderProps {
 }
 ---
 
-<header class="sticky top-0 z-50 w-full border-bottom">
+<BaseHead />
+<header class="top-0 z-50 w-full border-b">
     <div
-        class="header-gradient flex flex-row items-center justify-center px-4 mx-auto p-2"
+        class="[background-image:var(--gradient1)] flex flex-row items-center justify-center px-4 mx-auto p-2"
     >
         <nav class="hidden md:flex items-center">
             <div class="internal-links text-xl text-white flex gap-10">
@@ -29,10 +31,9 @@ interface HeaderProps {
     >
         <div class="flex items-center">
             <img src={mainAva.src} />
-
             <a href="/" class="flex flex-col leading-none">
-                <h1 class="text-[var(--blue)] text-2xl font-bold">Ваш</h1>
-                <h1 class="text-[var(--blue)] text-2xl font-bold">климат</h1>
+                <h1 class="text-(--blue) text-2xl font-bold">Ваш</h1>
+                <h1 class="text-(--blue) text-2xl font-bold">климат</h1>
                 <h1 class="text-[var(--orange)] text-2xl font-bold">
                     Engeneering
                 </h1>
