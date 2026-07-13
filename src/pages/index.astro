@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
+import Servise from "../components/Servise.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
@@ -13,8 +14,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     </head>
     <body>
         <Header />
-        <main class="h-full px-75 py-10">
+        <main class="flex flex-col px-75 py-10 gap-25">
             <Hero />
+            <Servise />
         </main>
         <Footer />
     </body>
