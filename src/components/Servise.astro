@@ -3,62 +3,55 @@ import users from "../assets/img/users-alt.svg";
 import truck from "../assets/img/truck.svg";
 import tool from "../assets/img/tool.svg";
 import handshake from "../assets/img/handshake.svg";
+
+const cardData = [
+    {
+        id: 1,
+        img: users.src,
+        title: "Бесплатный выезд",
+        discription:
+            "В нашей команде работают квалифицированные мастера, которые профессионально выполняют монтаж, обслуживание, диагностику и ремонт климатического оборудования.",
+    },
+    {
+        id: 2,
+        img: truck.src,
+        title: "Полный комплекс услуг",
+        discription:
+            "Выполняем продажу, монтаж, обслуживание, диагностику и ремонт бытовых и коммерческих систем кондиционирования, а также другого климатического оборудования любой сложности.",
+    },
+    {
+        id: 3,
+        img: tool.src,
+        title: "Опытные специалисты",
+        discription:
+            "Бесплатно выезжаем на объект для осмотра, консультации и подбора оптимального решения в удобное для вас время.",
+    },
+    {
+        id: 4,
+        img: handshake.src,
+        title: " Индивидуальный подход",
+        discription:
+            "Бесплатно выезжаем на объект для осмотра, консультации и подбора оптимального решения в удобное для вас время.",
+    },
+];
 ---
 
 <servise>
     <div class="grid grid-cols-2 justify-items-center gap-10">
         {/*1*/}
-        <div class="flex justify-between gap-5">
-            <img src={users.src} class="w-[48px] h-[48px]" />
-            <div class="max-w-[320px] flex flex-col gap-2">
-                <h2 class="text-2xl font bold">Бесплатный выезд</h2>
-                <h3 class="text-lg">
-                    В нашей команде работают квалифицированные мастера, которые
-                    профессионально выполняют монтаж, обслуживание, диагностику
-                    и ремонт климатического оборудования.
-                </h3>
-            </div>
-        </div>
-
-        {/*2*/}
-        <div class="flex justify-between gap-5">
-            <img src={truck.src} class="w-[48px] h-[48px]" />
-            <div class="max-w-[320px] flex flex-col gap-2">
-                <h2 class="text-2xl font bold">Полный комплекс услуг</h2><h3
-                    class="text-lg"
-                >
-                    Выполняем продажу, монтаж, обслуживание, диагностику и
-                    ремонт бытовых и коммерческих систем кондиционирования, а
-                    также другого климатического оборудования любой сложности.
-                </h3>
-            </div>
-        </div>
-
-        {/*3*/}
-        <div class="flex justify-between gap-5">
-            <img src={tool.src} class="w-[48px] h-[48px]" />
-            <div class="max-w-[320px] flex flex-col gap-2">
-                <h2 class="text-2xl font bold whitespace-nowrap">
-                    Опытные специалисты
-                </h2>
-                <h3 class="text-lg">
-                    Бесплатно выезжаем на объект для осмотра, консультации и
-                    подбора оптимального решения в удобное для вас время.
-                </h3>
-            </div>
-        </div>
-
-        {/*4*/}
-        <div class="flex justify-between gap-5">
-            <img src={handshake.src} class="w-[48px] h-[48px]" />
-            <div class="max-w-[320px] flex flex-col gap-2">
-                <h2 class="text-2xl font bold whitespace-nowrap">
-                    Индивидуальный подход
-                </h2><h3 class="text-lg">
-                    Бесплатно выезжаем на объект для осмотра, консультации и
-                    подбора оптимального решения в удобное для вас время.
-                </h3>
-            </div>
-        </div>
+        {
+            cardData.map((card) => (
+                <div class="flex justify-between gap-5">
+                    <img src={card.img} class="w-[48px] h-[48px]" />
+                    <div
+                        key={card.id}
+                        class="max-w-[320px] flex flex-col gap-2"
+                    >
+                        <h2 class="text-2xl font bold">{card.title}</h2>
+                        <h3 class="text-lg">{card.discription}</h3>
+                    </div>
+                </div>
+            ))
+        }
     </div>
 </servise>
