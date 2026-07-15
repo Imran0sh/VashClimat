@@ -4,30 +4,26 @@ import truck from "../assets/img/truck.svg";
 import tool from "../assets/img/tool.svg";
 import handshake from "../assets/img/handshake.svg";
 
-const cardData = [
+const cartData = [
     {
-        id: 1,
         img: users.src,
         title: "Бесплатный выезд",
         discription:
             "В нашей команде работают квалифицированные мастера, которые профессионально выполняют монтаж, обслуживание, диагностику и ремонт климатического оборудования.",
     },
     {
-        id: 2,
         img: truck.src,
         title: "Полный комплекс услуг",
         discription:
             "Выполняем продажу, монтаж, обслуживание, диагностику и ремонт бытовых и коммерческих систем кондиционирования, а также другого климатического оборудования любой сложности.",
     },
     {
-        id: 3,
         img: tool.src,
         title: "Опытные специалисты",
         discription:
             "Бесплатно выезжаем на объект для осмотра, консультации и подбора оптимального решения в удобное для вас время.",
     },
     {
-        id: 4,
         img: handshake.src,
         title: " Индивидуальный подход",
         discription:
@@ -40,15 +36,12 @@ const cardData = [
     <div class="grid grid-cols-2 justify-items-center gap-10">
         {/*1*/}
         {
-            cardData.map((card) => (
+            cartData.map((cart) => (
                 <div class="flex justify-between gap-5">
-                    <img src={card.img} class="w-[48px] h-[48px]" />
-                    <div
-                        key={card.id}
-                        class="max-w-[320px] flex flex-col gap-2"
-                    >
-                        <h2 class="text-2xl font bold">{card.title}</h2>
-                        <h3 class="text-lg">{card.discription}</h3>
+                    <img src={cart.img} class="w-[48px] h-[48px]" />
+                    <div class="max-w-[320px] flex flex-col gap-2">
+                        <h2 class="text-2xl font bold">{cart.title}</h2>
+                        <h3 class="text-lg">{cart.discription}</h3>
                     </div>
                 </div>
             ))
